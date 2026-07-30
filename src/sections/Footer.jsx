@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
 
       <p className="text-gray-400 text-sm mt-2">
-        © {new Date().getFullYear()} Bhargavi Bayar. All rights reserved.
+        © {new Date().getFullYear()} B S Bhargavi. All rights reserved.
       </p>
     </footer>
   );

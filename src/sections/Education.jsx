@@ -8,8 +8,8 @@ const educationData = [
   {
     year: "2023 - 2027",
     degree: "B.Tech in Cyber Security & Cyber Forensics",
-    institution: "Currently pursuing 3rd year, 6th semester",
-    cgpa: "CGPA: 9.65",
+    institution: "Srinivas University Institute of Engineering and Technology(Final year)",
+    cgpa: "CGPA: 9.5",
     logo: BtechLogo,
   },
   {

@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 
 const achievementsData = [
   {
+    title: "Hackathon Participant",
+    description:
+      "Participated in multiple hackathons to gain practical knowledge and problem-solving experience like AI Hackathon by Flinder's University, 24 hr National AI Hackathon at JNNCE Shimogga,Finspark'26 Cyber Security Hackathon by Bank of Maharastra,MSME Ideathon 2026",
+  },
+  {
     title: "Vice President - SATARC",
     description:
       "Student Association Committee Of Cyber Security. Conducted various Technical, Cultural, and Sports activities.",
@@ -12,11 +17,7 @@ const achievementsData = [
     description:
       "Led public service activities and social initiatives for the community.",
   },
-  {
-    title: "Hackathon Participant",
-    description:
-      "Participated in multiple hackathons to gain practical knowledge and problem-solving experience.",
-  },
+  
   {
     title: "Master of Ceremonies",
     description: "Hosted more than 30 events, engaging large audiences with confidence.",

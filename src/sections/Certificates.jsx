@@ -3,6 +3,7 @@ import { motion } from "framer-motion"; // ✅ import framer-motion
 
 const certificatesData = [
   { title: "NoSQL MongoDB", issuer: "United Latino Students Association", year: "2026" },
+    { title: "Generative AI Fundamentals", issuer: "TCS ION", year: "2026" },
   { title: "Nestle E-Learning", issuer: "Nestle", year: "2026" },
   { title: "SQL Injection Attacks", issuer: "CodeRed", year: "2026" },
   { title: "Intro to Dark Web, Anonymity & Cryptocurrency", issuer: "CodeRed", year: "2026" },

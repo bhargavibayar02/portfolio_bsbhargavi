@@ -10,6 +10,27 @@ import {
 
 const projectsData = [
   {
+  title: "Sri-Guard SOC Console",
+  description: "AI-Powered Security Operations Center Dashboard.",
+  details:
+    "Developed an AI-driven SOC dashboard for real-time security monitoring, threat visualization, alert management, and incident response using modern web technologies.",
+  github: "https://github.com/bhargavibayar02/sri-guard",
+},
+  {
+  title: "RGB-Thermal Pedestrian Detection",
+  description: "AI-Based Multimodal Pedestrian Detection.",
+  details:
+    "Enhanced the QFDet model for RGB-Thermal pedestrian detection by implementing gated feature fusion, improving detection accuracy in low-light and challenging environments using PyTorch and MMDetection.",
+  github: "https://github.com/bhargavibayar02/RGB-Thermal-Pedestrian-Detection",
+},
+  {
+  title: "MRA Interiors",
+  description: "Interior Design Business Website.",
+  details:
+    "Designed and developed a responsive website for an interior design company featuring service showcases, project galleries, contact forms, and a modern user interface.",
+  github: "https://github.com/bhargavibayar02/mra-interiors",
+},
+  {
     title: "EventSphere",
     description: "Microservice-based event management platform.",
     details:
@@ -24,6 +45,28 @@ const projectsData = [
       "A Decentralized Application built using Solidity Smart Contracts, Truffle and Ganache blockchain environment.",
     github: "https://github.com/bhargavibayar02/Codtech4.git",
   },
+  {
+  title: "AI Intrusion Detection System",
+  description: "Machine Learning-Based Network Intrusion Detection.",
+  details:
+    "Built an AI-powered intrusion detection system using machine learning to classify network traffic, detect malicious activities, and provide real-time security insights through an interactive dashboard.",
+  github: "https://github.com/bhargavibayar02/ai_ids",
+},
+{
+  title: "Weather App",
+  description: "Real-Time Weather Forecast Application.",
+  details:
+    "Developed a responsive weather application that fetches live weather data using APIs, displaying current conditions, temperature, humidity, wind speed, and forecasts.",
+  github: "https://github.com/bhargavibayar02/weatherapp",
+},
+{
+  title: "MoodStory",
+  description: "Mood-Based Journaling Application.",
+  details:
+    "Built a mood tracking and digital journaling application that allows users to record daily emotions, maintain personal journals, and visualize mood trends over time.",
+  github: "https://github.com/bhargavibayar02/moodstoryapp",
+},
+
 ];
 
 // Parent animation

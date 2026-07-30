@@ -1,97 +1,113 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Company logos
-import CodtechLogo from "../assets/images/codtech.png";
-import CodechTechLogo from "../assets/images/codech.png";
-import SystemTronLogo from "../assets/images/systemtron.png";
+// Company Logos
+import AbhimoLogo from "../assets/images/abhimo.png";
+import CenLogo from "../assets/images/cen.png";
 
 const experienceData = [
   {
-    company: "Codtech IT Solutions Private Limited",
-    role: "Online Internship - Cyber Security & Ethical Hacking",
-    period: "30 Jan 2026 - 27 Feb 2026",
+    company: "CEN Police Station, Mangaluru",
+    role: "Cyber Security Intern",
+    period: "June 2026 - July 2026",
     description:
-      "Gained hands-on experience in penetration testing, vulnerability assessment, and security monitoring. Developed practical skills in ethical hacking.",
-    logo: CodtechLogo,
-    certificate: "/certificates/certificate1.png",
+      "Assisted in cybercrime investigations, digital evidence handling, cyber forensics, incident reporting, cyber awareness activities, and gained practical exposure to law enforcement and cybersecurity operations.",
+    logo: CenLogo,
+    certificate: "/certificates/cen-certificate.png",
   },
   {
-    company: "System Tron",
-    role: "Cyber Security Internship",
-    period: "26 Jan 2026 - 22 Feb 2026",
+    company: "Abhimo Technologies Private Limited",
+    role: "Cloud Computing Intern",
+    period: "May 2026 - June 2026",
     description:
-      "Assisted in threat assessment, penetration testing, and monitoring security incidents for web applications.",
-    logo: SystemTronLogo,
-    certificate: "/certificates/certificate3.png",
+      "Worked on cloud computing concepts, virtual machines, cloud services, deployment models, cloud deployment, and hands-on implementation of cloud-based applications while gaining practical industry experience.",
+    logo: AbhimoLogo,
+    certificate: "/certificates/abhimo-certificate.png",
   },
-  {
-    company: "Codtech IT Solutions Private Limited",
-    role: "Blockchain Technology Internship",
-    period: "5 Jun 2025 - 5 Jul 2025",
-    description:
-      "Learned and applied blockchain architecture, smart contracts, and secure decentralized solutions.",
-    logo: CodtechLogo,
-    certificate: "/certificates/certificate4.png",
-  },
+  
 ];
 
 const Experience = () => {
   return (
     <section
       id="experience"
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-[#020617]"
+      className="min-h-screen bg-[#020617] text-white py-20 px-6"
     >
-      <h2 className="text-4xl font-bold mb-12 text-white">Experience</h2>
+      <div className="max-w-5xl mx-auto">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-cyan-400"
+        >
+          Internship Experience
+        </motion.h2>
 
-      <div className="relative max-w-4xl w-full">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-700"></div>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 top-0 h-full w-1 bg-cyan-500"></div>
 
-        {experienceData.map((exp, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className={`mb-12 flex flex-col md:flex-row items-center justify-between relative ${
-              index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-            }`}
-          >
-            {/* Card */}
-            <div className="bg-[#111827] text-white p-6 rounded-xl shadow-lg max-w-md relative z-10 hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center mb-2">
-                <img
-                  src={exp.logo}
-                  alt={exp.company}
-                  className="w-10 h-10 rounded-full mr-3 object-cover"
-                />
-                <p className="text-gray-400 text-sm">{exp.period}</p>
+          {experienceData.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                x: index % 2 === 0 ? -80 : 80,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 0.8,
+              }}
+              viewport={{ once: true }}
+              className={`relative mb-16 flex ${
+                index % 2 === 0
+                  ? "md:justify-start"
+                  : "md:justify-end"
+              }`}
+            >
+              {/* Timeline Dot */}
+              <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 w-5 h-5 rounded-full bg-cyan-400 border-4 border-[#020617] z-20"></div>
+
+              {/* Card */}
+              <div className="ml-14 md:ml-0 md:w-[45%] bg-[#111827] rounded-xl p-6 shadow-lg border border-cyan-500/20 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
+                {/* Logo + Company */}
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-cyan-400"
+                  />
+
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {exp.role}
+                    </h3>
+
+                    <p className="text-cyan-300 font-medium">
+                      {exp.company}
+                    </p>
+
+                    <p className="text-gray-400 text-sm">
+                      {exp.period}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-300 leading-relaxed">
+                  {exp.description}
+                </p>
+
               </div>
-              <h3 className="text-xl font-bold">{exp.role}</h3>
-              <p className="text-gray-300">{exp.company}</p>
-              <p className="text-gray-400 mt-1">{exp.description}</p>
-
-              {/* Certificate Button */}
-              {exp.certificate && (
-                <a
-                  href={exp.certificate}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-block px-4 py-2 bg-red-500 hover:bg-red-600 rounded-md text-white font-semibold transition"
-                >
-                  View Certificate
-                </a>
-              )}
-            </div>
-
-            {/* Red dot */}
-            <div
-              className="absolute top-6 md:top-8 w-4 h-4 bg-red-500 rounded-full border-2 border-gray-700 left-1/2 transform -translate-x-1/2 z-20"
-            ></div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ const skillsData = [
   {
     category: "Programming",
     icon: <SiPython className="inline mr-2" />,
-    skills: ["Python", "Java", "C", "JavaScript", "Solidity"],
+    skills: ["Python", "Java", "C", "JavaScript","C#"],
   },
   {
     category: "Web Development",

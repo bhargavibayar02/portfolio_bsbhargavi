@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import ProfilePic from "../assets/images/profile.jpg"; 
+import ProfilePic from "../assets/images/profile.png"; 
 
 const About = () => {
   const words = [
     { text: "a Student.", color: "text-red-500" },
     { text: "a Developer.", color: "text-white" },
-    { text: "a Pentest Enthusiast.", color: "text-red-500" },
+    { text: "a Security Enthusiast.", color: "text-red-500" },
     { text: "an Artist.", color: "text-white" },
     { text: "a Speaker.", color: "text-red-500" },
+     { text: "a Dancer.", color: "text-red-500" },
   ];
 
   const [index, setIndex] = useState(0);
