@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto h-16 px-6 flex items-center justify-between">
           {/* Logo */}
           <h1 className="text-2xl font-bold text-cyan-400 cursor-pointer">
-            Bhargavi
+            My Profile
           </h1>
 
           {/* Desktop Menu */}
