@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 // Icons from react-icons (ensure installed with: npm install react-icons)
-import { SiPython, SiJava, SiC, SiJavascript, SiReact, SiNodeDotJs, SiMongodb, SiMysql, SiLatex, SiSolidity } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
 import { AiOutlineCode } from "react-icons/ai";
