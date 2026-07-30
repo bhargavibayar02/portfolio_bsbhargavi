@@ -13,30 +13,33 @@ const Navbar = () => {
     { name: "Skills", to: "skills" },
     { name: "Achievements", to: "achievements" },
     { name: "Certificates", to: "certificates" },
+    { name: "Resume", to: "resume" },
     { name: "Contact", to: "contact" },
     { name: "Location", to: "location" },
   ];
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[#020617]/90 backdrop-blur-lg border-b border-cyan-500/20">
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#020617]/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg">
         <div className="max-w-7xl mx-auto h-16 px-6 flex items-center justify-between">
+          {/* Logo */}
           <h1 className="text-2xl font-bold text-cyan-400 cursor-pointer">
             Bhargavi
           </h1>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center gap-7">
+          <ul className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <Link
                   to={link.to}
-                  smooth
+                  smooth={true}
+                  spy={true}
                   duration={500}
                   offset={-70}
-                  spy
                   activeClass="text-cyan-400"
-                  className="cursor-pointer hover:text-cyan-400 transition"
+                  className="cursor-pointer hover:text-cyan-400 transition-colors duration-300"
                 >
                   {link.name}
                 </Link>
@@ -47,57 +50,60 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-cyan-500 px-4 py-2 rounded-lg hover:bg-cyan-600 transition"
+              download
+              className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-lg font-semibold transition duration-300"
             >
               <FaFileDownload />
               Resume
             </a>
           </ul>
 
-          {/* Hamburger */}
+          {/* Mobile Hamburger */}
           <button
-            className="lg:hidden text-white"
             onClick={() => setOpen(!open)}
+            className="md:hidden text-white text-3xl focus:outline-none"
+            aria-label="Toggle navigation menu"
           >
-            {open ? <FaTimes size={26} /> : <FaBars size={26} />}
+            {open ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed top-16 left-0 w-full bg-[#020617] z-40 transition-all duration-300 ${
-          open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-        } lg:hidden`}
-      >
-        <ul className="flex flex-col items-center py-8 gap-6">
-          {navLinks.map((link) => (
-            <li key={link.to}>
-              <Link
-                to={link.to}
-                smooth
-                duration={500}
-                offset={-70}
-                onClick={() => setOpen(false)}
-                className="text-lg cursor-pointer hover:text-cyan-400"
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
+      {open && (
+        <div className="fixed top-16 left-0 w-full bg-[#020617] border-t border-cyan-500/20 z-40 md:hidden">
+          <ul className="flex flex-col items-center py-6 space-y-5">
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  onClick={() => setOpen(false)}
+                  className="text-lg cursor-pointer hover:text-cyan-400 transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
 
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-cyan-500 px-5 py-3 rounded-lg"
-            onClick={() => setOpen(false)}
-          >
-            <FaFileDownload />
-            Resume
-          </a>
-        </ul>
-      </div>
+            <li>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 px-5 py-3 rounded-lg font-semibold transition duration-300"
+                onClick={() => setOpen(false)}
+              >
+                <FaFileDownload />
+                Download Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </>
   );
 };
