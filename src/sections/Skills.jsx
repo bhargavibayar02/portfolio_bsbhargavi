@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaDatabase } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
 import { AiOutlineCode } from "react-icons/ai";
-
+import { SiPython, SiReact } from "react-icons/si";
 const skillsData = [
   {
     category: "Programming",
